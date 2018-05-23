@@ -1,0 +1,21 @@
+<div class="container">
+  {% for article in articles %}
+    <div class="col-sm-6">
+
+
+      <div class="card">
+        <a href="{{__SELF__.property('article_url')}}/{{article.slug}}">
+        <div class="card__img">
+          <img src="{{article.image|media}}" alt="">
+        </div>
+
+        <div class="card__body">
+          <h3 class="card__title">{{article.title}}</h3>
+          <p class="card__text">{{article.abstract}}</p>
+          <p class="card__published_at">{{article.published_at}}</p>
+        </div>
+      </a>
+      </div>
+    </div>
+  {% endfor %}
+</div>

@@ -1,0 +1,60 @@
+{% set article = __SELF__.article %}
+
+<div class="jumbotron">
+    <div class="container">
+      <h1>{{ article.title }}</h1>
+      <p>{{ article.abstract|md }}</p>
+    </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="page-header">
+          <h2>{{ lang.introduction }}</h2>
+      </div>
+      <p>
+        {{article.introduction|md}}
+      </p>
+  </div>
+
+  <div class="row">
+      {% if __SELF__.property('toc') %}
+        <!-- TOC -->
+        <div class="col-sm-3"><h2>Contents</h2>
+          <nav id="toc"></nav>
+        </div>
+
+        <div class="col-sm-9">
+      {% endif %}
+
+      <!-- Sections -->
+      {% if __SELF__.property('paginate_sections') %}
+
+        <div class="text-center">
+          <p><a href="{{ sectionPage | page({ article: article.slug, slug: article.sections.first().slug }) }}" class="btn btn-lg btn-default">
+            {{ lang.next }}{{article.sections.first().title}}
+          </a></p>
+        </div>
+
+        <ul><h3>{{ lang.sections }}</h3>
+          {% for section in article.sections %}
+            <li><a href="{{sectionPage | page}}/{{article.slug}}/{{section.slug}}">{{section.title}}</a></li>
+          {% endfor %}
+        </ul>
+
+      {% else %}
+
+        {% for section in article.sections %}
+          <h3>{{section.title}}</h3>
+          {{section.content|md}}
+          <hr/>
+        {% endfor %}
+
+      {% endif %}
+
+      {% if __SELF__.property('toc') %}
+        <!-- TOC -->
+      </div>
+      {% endif %}
+  </div>
+</div>

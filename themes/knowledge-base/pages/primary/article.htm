@@ -1,0 +1,12 @@
+title = "test wiki article"
+url = "/articles/:slug"
+layout = "default"
+description = "This page must display a full article for a given URL.
+//!\\ Only published sections should be displayed"
+is_hidden = 1
+
+[article]
+slug = "{{ :slug }}"
+sectionPage = "primary/section"
+==
+{% component 'article' %}

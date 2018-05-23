@@ -1,0 +1,17 @@
+columns:
+    title:
+        label: 'octoplus.wiki::model_section.fields.content'
+        type: text
+        searchable: true
+        sortable: true
+    published:
+        label: 'octoplus.wiki::model_section.fields.published'
+        type: switch
+        sortable: true
+    published_at:
+        label: 'octoplus.wiki::model_section.fields.published_at'
+        type: datetime
+        sortable: true
+    comments:
+        label: 'octoplus.wiki::model_section.fields.comments'
+        type: countcomment

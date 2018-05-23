@@ -1,0 +1,12 @@
+# ===================================
+#  Relation Behavior Config
+# ===================================
+
+sections:
+    label: Section
+    view:
+        list: $/octoplus/wiki/models/section/columns.yaml
+        toolbarButtons: create|delete
+    manage:
+        form: $/octoplus/wiki/models/section/fields.yaml
+        recordsPerPage: 10

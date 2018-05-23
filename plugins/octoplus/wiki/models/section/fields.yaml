@@ -1,0 +1,68 @@
+fields: { }
+tabs:
+    fields:
+        title:
+            tab: 'octoplus.wiki::model_section.tabs.content'
+            label: 'octoplus.wiki::model_section.fields.title'
+            oc.commentPosition: ''
+            span: full
+            type: text
+        content:
+            label: 'octoplus.wiki::model_section.fields.content'
+            size: giant
+            oc.commentPosition: ''
+            mode: tab
+            span: full
+            type: markdown
+            tab: 'octoplus.wiki::model_section.tabs.content'
+        history:
+            tab: 'octoplus.wiki::model_section.tabs.revision_history'
+            label: 'octoplus.wiki::model_section.fields.history'
+            span: full
+            disabled: true
+            type: Octoplus\Wiki\FormWidgets\RevisionHistory
+        published:
+            tab: 'octoplus.wiki::model_section.tabs.publication_manager'
+            label: 'octoplus.wiki::model_section.fields.published'
+            span: left
+            type: checkbox
+        published_at:
+            tab: 'octoplus.wiki::model_section.tabs.publication_manager'
+            label: 'octoplus.wiki::model_section.fields.published_at'
+            span: left
+            cssClass: checkbox-align
+            type: datepicker
+            mode: datetime
+            trigger:
+                action: enable
+                field: published
+                condition: checked
+        comments:
+            tab: 'octoplus.wiki::model_section.tabs.publication_manager'
+            label: 'octoplus.wiki::model_section.fields.comments'
+            oc.commentPosition: ''
+            prompt: 'Add new item'
+            span: full
+            type: repeater
+            form:
+                fields:
+                    acknowledge:
+                        label: 'octoplus.wiki::model_section.fields.comments_acknowledge'
+                        span: auto
+                        type: switch
+                    comment:
+                        label: 'octoplus.wiki::model_section.fields.comments_comment'
+                        size: ''
+                        oc.commentPosition: ''
+                        mode: tab
+                        span: full
+                        type: markdown
+        slug:
+            tab: 'octoplus.wiki::model_section.tabs.configuration'
+            label: 'octoplus.wiki::model_section.fields.slug'
+            oc.commentPosition: ''
+            span: full
+            preset:
+                field: title
+                type: slug
+            type: text

@@ -1,0 +1,17 @@
+1.0.1:
+    - 'Inital version Articles, Section, RevisionHistory'
+    - 'Created table octoplus_wiki_articles'
+    - builder_table_create_octoplus_wiki_articles.php
+    - 'Created table octoplus_wiki_sections'
+    - builder_table_create_octoplus_wiki_sections.php
+1.0.2:
+    - 'Added thumbnail image to article'
+    - builder_table_update_octoplus_wiki_articles.php
+1.0.3:
+    - 'Back-end Publication Manager'
+    - 'Improve Internationalisation'
+    - builder_table_update_octoplus_wiki_sections.php
+    - builder_table_update_octoplus_wiki_articles_2.php
+    - seed_all_tables.php
+1.0.4:
+    - 'Comments Badges'

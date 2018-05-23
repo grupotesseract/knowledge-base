@@ -1,0 +1,30 @@
+{% set section = __SELF__.section %}
+
+<div class="container">
+
+    <div class="row">
+        <div class="page-header">
+            <h2>{{section.title}}</h2>
+        </div>
+        <p>
+          {{section.content|md}}
+        </p>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-6">
+        {% if section.prev %}
+        <div class="text-center">
+          <p><a href="{{section.prev.slug}}" class="btn btn-lg btn-default">{{ lang.next }}{{section.prev.title}}</a></p>
+        </div>
+        {% endif %}
+      </div>
+      <div class="col-sm-6">
+        {% if section.next %}
+        <div class="text-center">
+          <p><a href="{{section.next.slug}}" class="btn btn-lg btn-default">{{ lang.prev }}{{section.next.title}}</a></p>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+</div>

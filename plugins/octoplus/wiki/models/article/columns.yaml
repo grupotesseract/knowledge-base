@@ -1,0 +1,23 @@
+columns:
+    image:
+      label: Thumbnail
+      type: image
+      sortable: false
+    title:
+        label: 'octoplus.wiki::model_article.fields.title'
+        type: text
+        searchable: true
+        sortable: true
+    published_at:
+        label: 'octoplus.wiki::model_article.fields.published_at'
+        type: datetime
+        searchable: true
+    created_at:
+        label: 'octoplus.wiki::model_article.fields.created_at'
+        type: datetime
+        searchable: true
+    abstract:
+        label: 'octoplus.wiki::model_article.fields.abstract'
+        type: text
+        searchable: true
+        invisible: true

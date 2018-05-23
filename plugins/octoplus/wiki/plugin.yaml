@@ -1,0 +1,20 @@
+plugin:
+    name: 'octoplus.wiki::lang.plugin.name'
+    description: 'octoplus.wiki::lang.plugin.description'
+    author: octoplus
+    icon: oc-icon-book
+    homepage: 'http://nokwebspace.fr/'
+permissions:
+    octoplus.wiki.createarticle:
+        tab: 'octoplus.wiki::lang.plugin.name'
+        label: 'octoplus.wiki::lang.permissions.createarticle'
+    octoplus.wiki.use:
+        tab: 'octoplus.wiki::lang.plugin.name'
+        label: 'octoplus.wiki::lang.permissions.use'
+navigation:
+    main-menu-item:
+        label: 'octoplus.wiki::lang.plugin.name'
+        url: octoplus/wiki/articles
+        icon: icon-book
+        permissions:
+            - octoplus.wiki.use

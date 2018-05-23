@@ -1,0 +1,89 @@
+fields: {  }
+tabs:
+    fields:
+        title:
+            label: 'octoplus.wiki::model_article.fields.title'
+            oc.commentPosition: ''
+            span: full
+            required: 1
+            type: text
+            tab: 'octoplus.wiki::model_article.tabs.summary'
+        abstract:
+            label: 'octoplus.wiki::model_article.fields.abstract'
+            size: large
+            oc.commentPosition: ''
+            mode: tab
+            span: left
+            required: 1
+            type: markdown
+            tab: 'octoplus.wiki::model_article.tabs.summary'
+        image:
+            label: 'octoplus.wiki::model_article.fields.image'
+            span: right
+            oc.commentPosition: ''
+            mode: image
+            type: mediafinder
+            tab: 'octoplus.wiki::model_article.tabs.summary'
+        slug:
+            label: 'octoplus.wiki::model_article.fields.slug'
+            oc.commentPosition: ''
+            span: full
+            preset:
+                field: title
+                type: slug
+            type: text
+            tab: 'octoplus.wiki::model_article.tabs.content'
+        introduction:
+            label: 'octoplus.wiki::model_article.fields.introduction'
+            span: full
+            size: huge
+            oc.commentPosition: ''
+            mode: tab
+            type: markdown
+            tab: 'octoplus.wiki::model_article.tabs.content'
+        sections:
+            span: full
+            path: $/octoplus/wiki/controllers/articles/_field_sections.htm
+            context:
+                - update
+                - preview
+            type: partial
+            tab: 'octoplus.wiki::model_article.tabs.sections'
+        published:
+            tab: 'octoplus.wiki::model_section.tabs.publication_manager'
+            label: 'octoplus.wiki::model_section.fields.published'
+            span: left
+            type: checkbox
+        published_at:
+            tab: 'octoplus.wiki::model_section.tabs.publication_manager'
+            label: 'octoplus.wiki::model_section.fields.published_at'
+            span: left
+            cssClass: checkbox-align
+            type: datepicker
+            mode: datetime
+            trigger:
+                action: enable
+                field: published
+                condition: checked
+        created_at:
+            label: 'octoplus.wiki::model_article.fields.created_at'
+            oc.commentPosition: ''
+            mode: date
+            span: auto
+            disabled: 1
+            context:
+                - update
+                - preview
+            type: datepicker
+            tab: 'octoplus.wiki::model_article.tabs.statistics'
+        updated_at:
+            label: 'octoplus.wiki::model_article.fields.updated_at'
+            oc.commentPosition: ''
+            mode: date
+            span: auto
+            disabled: 1
+            context:
+                - update
+                - preview
+            type: datepicker
+            tab: 'octoplus.wiki::model_article.tabs.statistics'

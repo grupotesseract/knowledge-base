@@ -1,0 +1,22 @@
+{
+  "private": true,
+  "name": "Grupo Tesseract | Knowledge Base",
+  "version": "0.0.1",
+  "description": "Base de conhecimento do Grupo Tesseract.",
+  "author": "Thiago Braga <thibraga06@gmail.com>",
+  "license": "MIT",
+  "engines": {
+    "node": ">0.12 <9.0"
+  },
+  "main": "gulpfile.js",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.1.0",
+    "gulp-ignore": "^2.0.2",
+    "gulp-include": "^2.3.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify": "^3.0.0"
+  }
+}

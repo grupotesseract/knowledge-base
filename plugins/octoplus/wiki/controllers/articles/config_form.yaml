@@ -1,0 +1,10 @@
+name: Articles
+form: $/octoplus/wiki/models/article/fields.yaml
+modelClass: Octoplus\Wiki\Models\Article
+defaultRedirect: octoplus/wiki/articles
+create:
+    redirect: 'octoplus/wiki/articles/update/:id'
+    redirectClose: octoplus/wiki/articles
+update:
+    redirect: octoplus/wiki/articles
+    redirectClose: octoplus/wiki/articles
