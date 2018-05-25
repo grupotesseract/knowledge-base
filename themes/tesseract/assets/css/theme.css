@@ -1,30 +1,41 @@
+/**
+ * Usando Google Fonts
+ * =====================================================
+ *
+ * O PT Sans se mostrou uma ótima fonte, tanto no Windows
+ * quanto no Linux, sem a necessidade de importar a fonte
+ * bold, pois a normal já atendeu muito bem o negrito.
+ */
 @font-face {
-  font-family: 'lato';
-  src: url('../fonts/lato-black-webfont.eot');
-  src: url('../fonts/lato-black-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/lato-black-webfont.svg#latoblack') format('svg'), url('../fonts/lato-black-webfont.woff') format('woff'), url('../fonts/lato-black-webfont.ttf') format('truetype');
-  font-weight: 700;
+  font-family: 'PT Sans';
   font-style: normal;
-}
-@font-face {
-  font-family: 'lato';
-  src: url('../fonts/lato-italic-webfont.eot');
-  src: url('../fonts/lato-italic-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/lato-italic-webfont.svg#latoitalic') format('svg'), url('../fonts/lato-italic-webfont.woff') format('woff'), url('../fonts/lato-italic-webfont.ttf') format('truetype');
   font-weight: 400;
-  font-style: italic;
+  src: local('PT Sans'), local('PTSans-Regular'), url(https://fonts.gstatic.com/s/ptsans/v9/JX7MlXqjSJNjQvI4heMMGvY6323mHUZFJMgTvxaG2iE.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+20B4, U+2DE0-2DFF, U+A640-A69F;
 }
+/* cyrillic */
 @font-face {
-  font-family: 'lato';
-  src: url('../fonts/lato-regular-webfont.eot');
-  src: url('../fonts/lato-regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/lato-regular-webfont.svg#latoregular') format('svg'), url('../fonts/lato-regular-webfont.woff') format('woff'), url('../fonts/lato-regular-webfont.ttf') format('truetype');
+  font-family: 'PT Sans';
+  font-style: normal;
   font-weight: 400;
-  font-style: normal;
+  src: local('PT Sans'), local('PTSans-Regular'), url(https://fonts.gstatic.com/s/ptsans/v9/vtwNVMP8y9C17vLvIBNZI_Y6323mHUZFJMgTvxaG2iE.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
 }
+/* latin-ext */
 @font-face {
-  font-family: 'lato';
-  src: url('../fonts/lato-light-webfont.eot');
-  src: url('../fonts/lato-light-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/lato-light-webfont.svg#latolight') format('svg'), url('../fonts/lato-light-webfont.woff') format('woff'), url('../fonts/lato-light-webfont.ttf') format('truetype');
-  font-weight: 300;
+  font-family: 'PT Sans';
   font-style: normal;
+  font-weight: 400;
+  src: local('PT Sans'), local('PTSans-Regular'), url(https://fonts.gstatic.com/s/ptsans/v9/9kaD4V2pNPMMeUVBHayd7vY6323mHUZFJMgTvxaG2iE.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('PT Sans'), local('PTSans-Regular'), url(https://fonts.gstatic.com/s/ptsans/v9/ATKpv8nLYAKUYexo8iqqrg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
 }
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   select {
@@ -390,68 +401,23 @@
   padding-top: 60px !important;
   padding-bottom: 60px !important;
 }
-.navbar-header .navbar-brand {
-  padding-left: 55px;
-  background-image: url('../images/october.png');
-  background-size: auto 60%;
-  background-repeat: no-repeat;
-  background-position: 7px 50%;
-  -webkit-transition: color 0.2s ease 0.05s;
-  transition: color 0.2s ease 0.05s;
-  color: #ccc;
+.navbar-brand {
+  display: inline-block;
+  padding: 12px 20px;
+  margin-right: 1rem;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: inherit;
+  white-space: nowrap;
 }
-.navbar-header .navbar-brand:hover {
+.navbar-brand > img {
+  display: initial;
+  margin-top: -4px;
+  margin-right: 5px;
+  margin-left: 10px;
+}
+.navbar-inverse .navbar-brand {
   color: #fff;
-}
-.navbar-nav li.separator {
-  width: 1px;
-  background: rgba(255, 255, 255, 0.3);
-  height: 30px;
-  margin: 20px 10px 0 10px;
-}
-.navbar-autohide {
-  -webkit-transition: -webkit-transform .5s;
-  transition: -webkit-transform .5s;
-  transition: transform .5s;
-  transition: transform .5s, -webkit-transform .5s;
-}
-.navbar-autohide.is-hidden {
-  -webkit-transform: translateY(-72px);
-          transform: translateY(-72px);
-}
-.navbar-collapse:not(.in):not(.collapsing) .navbar-nav li > a {
-  -webkit-transition: color 0.2s ease 0.05s;
-  transition: color 0.2s ease 0.05s;
-}
-.navbar-collapse:not(.in):not(.collapsing) .navbar-nav li > a:after {
-  position: absolute;
-  height: 4px;
-  bottom: -1px;
-  content: '';
-  border-radius: 4px;
-  z-index: 5;
-  width: 0;
-  left: 50%;
-  -webkit-transition: all 0.2s ease 0.05s;
-  transition: all 0.2s ease 0.05s;
-}
-.navbar-collapse:not(.in):not(.collapsing) .navbar-nav li.active > a:after,
-.navbar-collapse:not(.in):not(.collapsing) .navbar-nav li > a:hover:after {
-  background: #000;
-}
-.navbar-collapse:not(.in):not(.collapsing) .navbar-nav li.active > a:after {
-  width: 100% !important;
-  left: 0 !important;
-}
-.navbar-collapse:not(.in):not(.collapsing) .navbar-nav li:hover > a:after {
-  width: 100%;
-  left: 0;
-}
-.navbar-collapse:not(.in):not(.collapsing) .navbar-nav li.active > a:hover:after {
-  background: #000;
-}
-.navbar-collapse:not(.in):not(.collapsing) .navbar-nav li > a:hover:after {
-  background: #e67e22;
 }
 body {
   padding-top: 70px;
