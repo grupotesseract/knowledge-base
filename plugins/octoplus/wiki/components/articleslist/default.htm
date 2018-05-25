@@ -2,6 +2,7 @@
   {% for article in articles %}
     <div class="col-sm-6">
 
+      {{ url('/') }}
 
       <div class="card">
         <a href="{{__SELF__.property('article_url')}}/{{article.slug}}">
