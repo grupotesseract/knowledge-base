@@ -17,20 +17,22 @@ const gulp     = require('gulp'),
 
   styles = {
     base:    './assets/less',
-    src:     './assets/less/**/*.less',
+    src:     './assets/less/theme.less',
     dest:    './assets/css',
     options: { outputStyle: 'compressed' }
   },
 
   bsFiles = [
     './assets/css/**/*.css',
-    './pages/**/*.htm'
+    './layouts/**/*.htm',
+    './pages/**/*.htm',
+    './partials/**/*.htm',
   ];
 
 // Styles
 gulp.task('styles', function () {
   return gulp.src(styles.src, { base: styles.base })
-    .pipe(less(styles.options).on('error', less.logError))
+    .pipe(less())
     .pipe(autoprefixer('last 2 version'))
     .pipe(gulp.dest(styles.dest))
     .pipe(reload({ stream: true }));

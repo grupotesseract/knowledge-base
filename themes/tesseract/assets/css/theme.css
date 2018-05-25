@@ -396,6 +396,7 @@
   background-size: auto 60%;
   background-repeat: no-repeat;
   background-position: 7px 50%;
+  -webkit-transition: color 0.2s ease 0.05s;
   transition: color 0.2s ease 0.05s;
   color: #ccc;
 }
@@ -409,12 +410,17 @@
   margin: 20px 10px 0 10px;
 }
 .navbar-autohide {
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
   transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
 }
 .navbar-autohide.is-hidden {
-  transform: translateY(-72px);
+  -webkit-transform: translateY(-72px);
+          transform: translateY(-72px);
 }
 .navbar-collapse:not(.in):not(.collapsing) .navbar-nav li > a {
+  -webkit-transition: color 0.2s ease 0.05s;
   transition: color 0.2s ease 0.05s;
 }
 .navbar-collapse:not(.in):not(.collapsing) .navbar-nav li > a:after {
@@ -426,11 +432,12 @@
   z-index: 5;
   width: 0;
   left: 50%;
+  -webkit-transition: all 0.2s ease 0.05s;
   transition: all 0.2s ease 0.05s;
 }
 .navbar-collapse:not(.in):not(.collapsing) .navbar-nav li.active > a:after,
 .navbar-collapse:not(.in):not(.collapsing) .navbar-nav li > a:hover:after {
-  background: #000000;
+  background: #000;
 }
 .navbar-collapse:not(.in):not(.collapsing) .navbar-nav li.active > a:after {
   width: 100% !important;
@@ -441,7 +448,7 @@
   left: 0;
 }
 .navbar-collapse:not(.in):not(.collapsing) .navbar-nav li.active > a:hover:after {
-  background: #000000;
+  background: #000;
 }
 .navbar-collapse:not(.in):not(.collapsing) .navbar-nav li > a:hover:after {
   background: #e67e22;
