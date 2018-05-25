@@ -3,9 +3,9 @@
  *
  * Installation:
  *
- *   cd ${KB_PATH}/themes/knowledge-base
  *   npm i -g gulp-cli
- *   npm install
+ *   npm i
+ *   gulp
  */
 
 const gulp     = require('gulp'),
@@ -32,7 +32,7 @@ const gulp     = require('gulp'),
 // Styles
 gulp.task('styles', function () {
   return gulp.src(styles.src, { base: styles.base })
-    .pipe(less())
+    .pipe(less(styles.options))
     .pipe(autoprefixer('last 2 version'))
     .pipe(gulp.dest(styles.dest))
     .pipe(reload({ stream: true }));
