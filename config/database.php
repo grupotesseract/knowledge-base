@@ -70,7 +70,7 @@ return [
             'port'     => 5432,
             'database' => 'kb',
             'username' => 'tesseract',
-            'password' => '@7h#$IRuLRa&eE',
+            'password' => 'eG2%cCRMU3HXS@',
             'charset'  => 'utf8',
             'prefix'   => '',
             'schema'   => 'public',

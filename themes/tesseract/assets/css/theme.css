@@ -82,6 +82,10 @@
 .callout-success h4 {
   color: #3c763d;
 }
+.card__img {
+  max-height: 150px;
+  overflow: hidden;
+}
 .navbar {
   height: 56px;
   min-height: 56px;
