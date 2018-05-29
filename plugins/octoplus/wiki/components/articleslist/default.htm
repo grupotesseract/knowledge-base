@@ -1,17 +1,32 @@
-<div class="container">
-  {% for article in articles %}
-    <div class="col-sm-6">
+<div class="header">
+  <div class="container">
+    <img src="http://res.cloudinary.com/tesseract/image/upload/c_scale,h_206/v1507448078/logo-tesseract-completo-branco.png" height="206" />
+    <h5>Knowledge Base</h5>
+  </div>
+</div>
 
+<div class="container articles">
+  <!-- {% for article in articles %}
+    <a href="{{ __SELF__.property('article_url') }}/{{ article.slug }}">
       <div class="card">
-        <a href="{{ __SELF__.property('article_url') }}/{{ article.slug }}">
-
         <div class="card__body">
           <h3 class="card__title">{{ article.title }}</h3>
           <p class="card__text">{{ article.abstract }}</p>
-          <p class="card__published_at">{{ article.published_at }}</p>
+        </div>
+      </div>
+    </a>
+  {% endfor %} -->
+
+  {% for i in range(0, 3) %}
+    {% for article in articles %}
+      <a href="{{ __SELF__.property('article_url') }}/{{ article.slug }}">
+        <div class="card">
+          <div class="card__body">
+            <h3 class="card__title">{{ article.title }}</h3>
+            <p class="card__text">{{ article.abstract }}</p>
+          </div>
         </div>
       </a>
-      </div>
-    </div>
+    {% endfor %}
   {% endfor %}
 </div>

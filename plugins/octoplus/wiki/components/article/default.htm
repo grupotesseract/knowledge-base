@@ -1,31 +1,26 @@
 {% set article = __SELF__.article %}
 
-<div class="jumbotron">
-    <div class="container">
-      <h1>{{ article.title }}</h1>
-      <p>{{ article.abstract|md }}</p>
-    </div>
+<div class="header">
+  <div class="container">
+    <h1>{{ article.title }}</h1>
+    <h6>{{ article.abstract }}</h6>
+  </div>
 </div>
 
 <div class="container">
   <div class="row">
-      <div class="page-header">
-          <h2>{{ lang.introduction }}</h2>
-      </div>
-      <p>
-        {{article.introduction|md}}
-      </p>
+    {{ article.introduction | md }}
   </div>
 
   <div class="row">
-      {% if __SELF__.property('toc') %}
-        <!-- TOC -->
-        <div class="col-sm-3"><h2>Contents</h2>
-          <nav id="toc"></nav>
-        </div>
+    {% if __SELF__.property('toc') %}
+      <!-- TOC -->
+      <div class="col-sm-3"><h2>Contents</h2>
+        <nav id="toc"></nav>
+      </div>
 
-        <div class="col-sm-9">
-      {% endif %}
+      <div class="col-sm-9">
+    {% endif %}
 
       <!-- Sections -->
       {% if __SELF__.property('paginate_sections') %}
