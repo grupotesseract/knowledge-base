@@ -34,7 +34,7 @@ Em outra aba, na mesma pasta:
 
 ```
 docker-compose exec --user=laradock workspace composer install
-docker-compose exec --user=laradock workspace php artisan october:install
+docker-compose exec workspace php artisan october:install
 ```
 
 Em outra aba, na mesma pasta:  
