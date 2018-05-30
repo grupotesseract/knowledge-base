@@ -1,5 +1,6 @@
 <p align="center">
   <img src="http://res.cloudinary.com/tesseract/image/upload/v1507448079/logo-tesseract-completo-preto.png" alt="Grupo Tesseract" />
+  <p>Knowledge Base</p>
 </p>
 
 Criado com [October CMS](http://octobercms.com).
@@ -7,13 +8,25 @@ Criado com [October CMS](http://octobercms.com).
 ## Requisitos
 
 - Docker
-- Docker Compose
-- Node
-- Gulp
 
 ```
-curl https://get.docker.com | sh
+curl -fsSL https://get.docker.com/ | sh
+sudo groupadd docker
+sudo usermod -aG docker $USER
+sudo systemctl restart docker
 ```
+
+- Docker Compose
+
+```
+```
+
+- Node
+
+```
+```
+
+- Gulp
 
 ```
 npm i -g gulp-cli
