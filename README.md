@@ -9,7 +9,7 @@ Criado com [October CMS](http://octobercms.com).
 
 - Docker
 
-```
+``` bash
 curl -fsSL https://get.docker.com/ | sh
 sudo groupadd docker
 sudo usermod -aG docker $USER
@@ -19,6 +19,9 @@ sudo systemctl restart docker
 - Docker Compose
 
 ```
+COMPOSE_VERSION=`git ls-remote https://github.com/docker/compose | grep refs/tags | grep -oP "[0-9]+\.[0-9][0-9]+\.[0-9]+$" | tail -n 1`
+sudo sh -c "curl -L https://github.com/docker/compose/releases/download/${COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose"
+sudo chmod +x /usr/local/bin/docker-compose
 ```
 
 - Node
