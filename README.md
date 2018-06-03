@@ -4,11 +4,19 @@
 
 <h3 align="center">KNOWLEDGE BASE</h3>
 
+<p align="center">
+  <a href="https://github.com/ellerbrock/open-source-badges"><img src="https://badges.frapsoft.com/os/v2/open-source.png?v=103" alt="Open Source Love"></a>
+</p>
+
+## Sobre
+
 Base de conhecimento do [Grupo Tesseract](https://grupotesseract.com.br) criado com [October CMS](http://octobercms.com) e [Otcoplus Wiki Plugin](https://octobercms.com/plugin/octoplus-wiki).
 
 ## Requisitos
 
 - Docker
+
+<small>
 
 ``` bash
 curl -fsSL https://get.docker.com/ | sh
@@ -16,6 +24,8 @@ sudo groupadd docker
 sudo usermod -aG docker $USER
 sudo systemctl restart docker
 ```
+
+</small>
 
 - Docker Compose
 
