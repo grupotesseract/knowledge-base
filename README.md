@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="http://res.cloudinary.com/tesseract/image/upload/c_scale,h_214/v1507448079/logo-tesseract-completo-preto.png" alt="Grupo Tesseract" />
+  <img src="https://res.cloudinary.com/tesseract/image/upload/c_scale,h_214/v1507448079/logo-tesseract-completo-preto.png" alt="Grupo Tesseract" />
 </p>
 
 <h3 align="center">KNOWLEDGE BASE</h3>
