@@ -6,60 +6,68 @@
 
 // Icons
 // --------------------------------------------------
-@FontAwesomePath:    "../vendor/font-awesome/font";
+@FontAwesomePath:                 '../vendor/font-awesome/font';
 
 // Brands
 // --------------------------------------------------
-@brand-primary: #3097d1;
-@brand-info: #8eb4cb;
-@brand-success: #4eb76e;
-@brand-warning: #cbb956;
-@brand-danger:  #bf5329;
+@brand-primary:                   #3097d1;
+@brand-info:                      #8eb4cb;
+@brand-success:                   #4eb76e;
+@brand-warning:                   #cbb956;
+@brand-danger:                    #bf5329;
+@link-color:                      #1f3f50;
 
 // Typography
 // --------------------------------------------------
-@font-family-sans-serif:  "PT Sans", sans-serif;
-@line-height-base: 1.6;
-@font-size-base: 16px;
-@text-color: #586667;
-@headings-color: #1f3f50;
-@jumbotron-heading-color: @headings-color;
+@font-family-sans-serif:          'PT Sans', sans-serif;
+@line-height-base:                1.6;
+@font-size-base:                  16px;
+@text-color:                      #666;
+@headings-color:                  @link-color;
+
+@font-size-h1:                    floor((@font-size-base * 2));
+@font-size-h2:                    floor((@font-size-base * 1.8));
+@font-size-h3:                    ceil((@font-size-base * 1.6));
+@font-size-h4:                    ceil((@font-size-base * 1.25));
+@font-size-h5:                    @font-size-base;
+@font-size-h6:                    ceil((@font-size-base * 0.85));
+
 
 // Spacing
 // --------------------------------------------------
-@spacer: 20px;
-@spacer-y: @spacer;
-@spacer-x: @spacer;
+@spacer:                          20px;
+@spacer-y:                        @spacer;
+@spacer-x:                        @spacer;
 
 // Navbar
 // --------------------------------------------------
-@navbar-height: 70px;
-@navbar-margin-bottom: 0;
+@navbar-height:                   70px;
+@navbar-margin-bottom:            0;
 
-@navbar-inverse-bg: #343a40;
-@navbar-inverse-link-color: rgba(255,255,255,0.6);
+@navbar-inverse-bg:               #343a40;
+@navbar-inverse-link-color:       rgba(255,255,255,0.6);
 
 @navbar-link-stripe-color-active: #000;
-@navbar-link-stripe-color-hover: #e67e22;
+@navbar-link-stripe-color-hover:  #e67e22;
 
 // Callouts
 // --------------------------------------------------
-@callout-padding:               20px;
-@callout-border-radius:         @border-radius-base;
-@callout-border:                @gray-lighter;
+@callout-padding:                 20px;
+@callout-border-radius:           @border-radius-base;
+@callout-border:                  @gray-lighter;
 
-@callout-info-bg:               #f4f8fa;
-@callout-info-text:             @state-info-text;
-@callout-info-border:           @state-info-border;
+@callout-info-bg:                 #f4f8fa;
+@callout-info-text:               @state-info-text;
+@callout-info-border:             @state-info-border;
 
-@callout-warning-bg:            #faf8f0;
-@callout-warning-text:          @state-warning-text;
-@callout-warning-border:        @state-warning-border;
+@callout-warning-bg:              #faf8f0;
+@callout-warning-text:            @state-warning-text;
+@callout-warning-border:          @state-warning-border;
 
-@callout-danger-bg:             #fdf7f7;
-@callout-danger-text:           @state-danger-text;
-@callout-danger-border:         @state-danger-border;
+@callout-danger-bg:               #fdf7f7;
+@callout-danger-text:             @state-danger-text;
+@callout-danger-border:           @state-danger-border;
 
-@callout-success-bg:            #f9fdf7;
-@callout-success-text:          @state-success-text;
-@callout-success-border:        @state-success-border;
+@callout-success-bg:              #f9fdf7;
+@callout-success-text:            @state-success-text;
+@callout-success-border:          @state-success-border;

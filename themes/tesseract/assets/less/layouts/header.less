@@ -1,9 +1,10 @@
+@header-padding: 50px;
+
 .header {
   background-color: @navbar-inverse-bg;
   color:            #fff;
   margin-bottom:    30px;
-  padding:          50px 0;
-  padding-bottom:   80px;
+  padding:          @header-padding 0 (2 * @header-padding);
   text-align:       center;
 
   h1,
@@ -19,15 +20,8 @@
     font-size: 28px;
   }
 
-  h5 {
-    font-size:      26px;
-    margin-top:     15px;
-    text-transform: uppercase;
-  }
-
   h6 {
-    line-height: 1.4;
-    margin:      0 auto;
-    max-width:   540px;
+    margin:    0 auto;
+    max-width: 540px;
   }
 }
