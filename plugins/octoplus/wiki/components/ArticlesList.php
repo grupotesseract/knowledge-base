@@ -27,17 +27,18 @@ class ArticlesList extends ComponentBase
         ];
     }
 
-    public function onRun(){
-      $this->articles = $this->page['articles'] = $this->loadArticles();
+    public function onRun()
+    {
+        $this->articles = $this->page['articles'] = $this->loadArticles();
 
-      $this->addCss('/plugins/octoplus/wiki/assets/articleList.css');
+        $this->addCss('/plugins/octoplus/wiki/assets/articleList.css');
     }
 
     protected function loadArticles()
     {
-      $articles = ArticleModel::isPublished()->get();
+        $articles = ArticleModel::isPublished()->orderBy('published_at')->get();
 
-      return $articles;
+        return $articles;
     }
 
 }
