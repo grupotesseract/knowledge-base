@@ -6,7 +6,7 @@
 </div>
 
 <div class="container articles">
-  <!-- {% for article in articles %}
+  {% for article in articles %}
     <a href="{{ __SELF__.property('article_url') }}/{{ article.slug }}">
       <div class="card">
         <div class="card__body">
@@ -15,18 +15,5 @@
         </div>
       </div>
     </a>
-  {% endfor %} -->
-
-  {% for i in range(0, 3) %}
-    {% for article in articles %}
-      <a href="{{ __SELF__.property('article_url') }}/{{ article.slug }}">
-        <div class="card">
-          <div class="card__body">
-            <h3 class="card__title">{{ article.title }}</h3>
-            <p class="card__text">{{ article.abstract }}</p>
-          </div>
-        </div>
-      </a>
-    {% endfor %}
   {% endfor %}
 </div>
