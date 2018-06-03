@@ -1,5 +1,7 @@
+@card-padding:  20px;
+
 .card {
-  padding:      30px;
+  padding:      @card-padding;
   padding-left: 70px;
 
   & &__body {
@@ -12,8 +14,9 @@
   }
 
   &__title {
-    font-size:  20px;
-    margin-top: 0;
+    font-size:     20px;
+    margin-top:    0;
+    margin-bottom: 2px;
   }
 
   &__text {
@@ -43,7 +46,7 @@
     background-image:    url(http://res.cloudinary.com/tesseract/image/upload/c_scale,h_30/v1507448078/logo-tesseract-cubo-preto_fo7kqy.png);
     background-repeat:   no-repeat;
     background-position: center;
-    margin-top:          -30px;
+    margin-top:          -@card-padding;
     opacity:             .25;
     position:            absolute;
     left:                0;
