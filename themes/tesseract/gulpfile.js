@@ -38,11 +38,8 @@ gulp.task('browser-sync', function () {
     logSnippet: false,
     files:      [
       './assets/css/theme.css',
-      './layouts/**/*.htm',
-      './pages/**/*.htm',
-      './partials/**/*.htm',
-      '../../plugins/octoplus/wiki/**/*.htm',
-      '../../plugins/octoplus/wiki/**/*.php'
+      './**/*.htm',
+      './**/*.php'
     ]
   });
 });
