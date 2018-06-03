@@ -29,21 +29,21 @@
 
         <div class="text-center">
           <p><a href="{{ sectionPage | page({ article: article.slug, slug: article.sections.first().slug }) }}" class="btn btn-lg btn-default">
-            {{ lang.next }}{{article.sections.first().title}}
+            {{ lang.next }}{{ article.sections.first().title }}
           </a></p>
         </div>
 
         <ul><h3>{{ lang.sections }}</h3>
           {% for section in article.sections %}
-            <li><a href="{{sectionPage | page}}/{{article.slug}}/{{section.slug}}">{{section.title}}</a></li>
+            <li><a href="{{ sectionPage | page }}/{{ article.slug }}/{{ section.slug }}">{{section.title}}</a></li>
           {% endfor %}
         </ul>
 
       {% else %}
 
         {% for section in article.sections %}
-          <h3>{{section.title}}</h3>
-          {{section.content|md}}
+          <h3>{{ section.title }}</h3>
+          {{ section.content|md }}
           <hr/>
         {% endfor %}
 
