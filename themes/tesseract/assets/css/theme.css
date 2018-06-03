@@ -49,6 +49,9 @@ a:hover,
 a:visited {
   text-decoration: none;
 }
+p {
+  margin: 0 0 20px;
+}
 .callout {
   margin-bottom: 25px;
   padding: 20px;
@@ -90,7 +93,7 @@ a:visited {
   color: #3c763d;
 }
 .card {
-  padding: 30px;
+  padding: 20px;
   padding-left: 70px;
 }
 .card .card__body {
@@ -103,6 +106,7 @@ a:visited {
 .card__title {
   font-size: 20px;
   margin-top: 0;
+  margin-bottom: 2px;
 }
 .card__text {
   font-size: 13px;
@@ -129,7 +133,7 @@ a:visited {
   background-image: url(http://res.cloudinary.com/tesseract/image/upload/c_scale,h_30/v1507448078/logo-tesseract-cubo-preto_fo7kqy.png);
   background-repeat: no-repeat;
   background-position: center;
-  margin-top: -30px;
+  margin-top: -20px;
   opacity: .25;
   position: absolute;
   left: 0;
@@ -184,8 +188,7 @@ body {
   background-color: #343a40;
   color: #fff;
   margin-bottom: 30px;
-  padding: 50px 0;
-  padding-bottom: 80px;
+  padding: 50px 0 100px;
   text-align: center;
 }
 .header h1,
@@ -199,17 +202,18 @@ body {
 .header h1 {
   font-size: 28px;
 }
-.header h5 {
-  font-size: 26px;
-  margin-top: 15px;
-  text-transform: uppercase;
-}
 .header h6 {
-  line-height: 1.4;
   margin: 0 auto;
   max-width: 540px;
 }
 .footer {
   text-align: center;
   font-size: 12px;
+  padding-bottom: 20px;
 }
+.footer .small-logo {
+  opacity: .8;
+  margin-bottom: 10px;
+}
+
+/*# sourceMappingURL=theme.css.map */
