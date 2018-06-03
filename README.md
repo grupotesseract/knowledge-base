@@ -55,7 +55,6 @@ npm i
 
 ## Instalação
 
-
 ```
 git clone github:grupotesseract/knowledge-base
 cd knowledge-base
