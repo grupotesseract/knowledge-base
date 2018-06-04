@@ -38,8 +38,9 @@ gulp.task('browser-sync', function () {
     logSnippet: false,
     files:      [
       './assets/css/theme.css',
-      './**/*.htm',
-      './**/*.php'
+      '../../plugins/**/*.htm',
+      '../../plugins/**/*.php',
+      '!../../data'
     ]
   });
 });
@@ -49,3 +50,6 @@ gulp.task('default', ['styles'], function () {
   gulp.start('browser-sync');
   gulp.watch('./assets/less/**/*.less', ['styles']);
 });
+
+// Production
+gulp.task('production', ['styles']);
